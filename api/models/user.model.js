@@ -6,10 +6,11 @@ const userSchema = mongoose.Schema({
         unique : true,
         required : true
     },
-    password :{
+    hashPassword :{
         type:String,
         required : true
     }
 },{timestamps :true});
 
-module.exports = mongoose.model('User',userSchema);
+const User = mongoose.model('User',userSchema);
+export default User;
